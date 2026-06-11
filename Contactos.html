@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png">
+<title>Contactos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMHEYCXL32"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZMHEYCXL32');
+</script>
+
+<style>
+
+body {
+    background-color: #DCEAF7;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #F5F2E8;
+    width: 320px;
+    padding: 60px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.02);
+}
+
+.titulo {
+    text-align: center;
+    color: #7A6F60;
+    margin-top: 10px;
+}
+
+.texto {
+    font-family: 'Pacifico', cursive;
+    color: #7A6F60;
+    font-size: 28px;
+}
+
+.descripcion {
+    font-size: 13px;
+    color: #7A6F60;
+    margin: 15px 0;
+}
+
+.boton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #a6c1ee;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #7A6F60;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #7A6F60;
+    font-family: 'Quicksand', sans-serif;
+}
+
+@media (max-width: 600px) {
+
+    .texto {
+        font-size: 28px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .marca {
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="marca">
+        <span class="texto">Made</span>
+        <img src="Ann.png" class="logo">
+        <span class="texto">by Annie</span>
+    </div>
+
+<h2 class="titulo">Contáctanos</h2>
+
+    <a href="https://wa.me/593986315084" target="_blank" class="boton">
+        WhatsApp
+    </a>
+
+    <a href="https://instagram.com/madebyannie.art" target="_blank" class="boton">
+        Instagram
+    </a>
+<br>
+  <p class="descripcion">
+    Llaveros personalizados hechos con amor
+    Diseños únicos creados especialmente para ti
+    </p>
+<footer>
+    © 2026 Made by Annie
+</footer>
+
+</div>
+
+</body>
+</html>

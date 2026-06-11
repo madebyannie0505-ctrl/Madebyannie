@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+<title>Pedir</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMHEYCXL32"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZMHEYCXL32');
+</script>
+
+<style>
+body {
+    background-color: #DCEAF7;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    color: #7A6F60;
+}
+
+.contenedor {
+    background-color: #F5F2E8;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 320px;
+}
+
+.contenedor h3 {
+    font-family: "Pacifico", "cursive";
+    font-size: 20px;
+}
+
+img {
+    width: 200px;
+    border-radius: 15px;
+}
+
+select, textarea {
+    width: 90%;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.boton {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #A9C7E8;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+   background-color: #7A6F60;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #7A6F60;
+    font-family: 'Quicksand', sans-serif;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<img id="imagenProducto">
+
+<h3 id="producto"></h3>
+
+<div id="coloresBox" style="display:none;">
+    <label>Elige color</label><br>
+    <select id="color"></select>
+</div>
+
+<textarea id="mensaje" placeholder="Especifica aqui algun cambio.."></textarea>
+
+<br>
+<button class="boton" onclick="enviar()">Enviar a WhatsApp</button>
+
+</div>
+
+<footer>
+    © 2026 Made by Annie
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+let producto = params.get("producto");
+let img = params.get("img");
+
+document.getElementById("producto").innerText = producto;
+document.getElementById("imagenProducto").src = img;
+
+// colores por producto
+let coloresProductos = {
+  "Llavero Duo SweetRolls": ["Celeste + Crema", "Rosa + Amarillo","Perzonalizado"],
+};
+
+if (coloresProductos[producto]) {
+
+  document.getElementById("coloresBox").style.display = "block";
+
+  let select = document.getElementById("color");
+
+  coloresProductos[producto].forEach(c => {
+    let op = document.createElement("option");
+    op.textContent = c;
+    select.appendChild(op);
+  });
+}
+
+// enviar a whatsapp
+function enviar() {
+
+  let color = document.getElementById("color")?.value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let texto = "Holi quiero pedir:";
+
+  texto += "\nProducto: " + producto;
+
+  if (color) {
+    texto += "\nColor: " + color;
+  }
+
+  if (mensaje) {
+    texto += "\nDetalles: " + mensaje;
+  }
+
+  let numero = "593986315084";
+
+  let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+
+  window.open(url, "_blank");
+}
+</script>
+
+
+</body>
+</html>

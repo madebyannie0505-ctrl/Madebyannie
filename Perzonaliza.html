@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png">
+<title>Personaliza tu pedido</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMHEYCXL32"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZMHEYCXL32');
+</script>
+
+<style>
+
+body {
+    background-color: #DCEAF7;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.texto {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #7A6F60;
+}
+
+.titulo {
+    text-align: center;
+    color: #7A6F60;
+    margin-top: 10px;
+}
+
+.formulario {
+    background-color: #F5F2E8;
+    width: 330px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* espacio entre texto y logo */
+    margin-bottom: 10px;
+}
+
+.logo-form .logo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.02);
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+    background-color: #a6c1ee;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #7A6F60;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 15px;
+    color: #7A6F60;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #7A6F60;
+    font-family: 'Quicksand', sans-serif;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="formulario">
+
+<h2 class="titulo">Describe tu pedido <3</h2>
+
+<div class="logo-form">
+    <span class="texto">Made</span>
+    <img src="Ann.png" class="logo">
+    <span class="texto">by Annie</span>
+</div>
+
+<p>
+Al enviar, se abrirá WhatsApp para finalizar tu pedido  
+Puedes enviarme una imagen de referencia por ahí 
+</p>
+
+<label>Nombre:</label>
+<input type="text" id="nombre" placeholder="Tu nombre">
+
+<label>Mensaje o pedido:</label>
+<textarea id="mensaje" placeholder="Describe tu pedido o idea"></textarea>
+
+<p id="productoSeleccionado"></p>
+
+</form>
+<button type="button" onclick="enviarWhatsApp()" class="boton">
+    Enviar pedido
+</button>
+
+<script>
+function enviarWhatsApp() {
+    let nombre = document.querySelector('input').value;
+    let mensaje = document.querySelector('textarea').value;
+
+    let texto = "Holi mi nombre es" + nombre + 
+    " y quiero este pedido: " + mensaje;
+
+    let url = "https://wa.me/593986315084?text=" + encodeURIComponent(texto);
+
+    window.open(url, "_blank");
+}
+</script>
+</div>
+
+<footer>
+    © 2026 Made by Annie
+</footer>
+
+</body>
+</html>
