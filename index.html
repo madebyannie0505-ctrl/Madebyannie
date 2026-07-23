@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Made by Annie art</title>
+
+<meta name="description"
+content="Llaveros de arcilla y accesorios personalizados. Encuentra el detalle tierno y único para ti.">
+
+<link rel="icon" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMHEYCXL32"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZMHEYCXL32');
+</script>
+
+<style>
+
+body {
+    background-color: #DCEAF7;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: #F5F2E8;
+    padding: 50px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 25px;
+}
+
+nav a {
+    margin: 8px;
+    padding: 10px 15px;
+    background-color: #A9C7E8;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #7A6F60;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.boton {
+   display: inline-block;
+   margin-top: 20px;
+   font-size: 15px;
+   padding: 14px 30px;
+   background: #A9C7E8;
+   color: white;
+   text-decoration: none;
+   border-radius: 999px;
+   font-family:"Quicksand", sans-serif;
+   font-weigth: bold;
+   letter-spacing:.5px;
+   transition: 3s;
+   box-shadow: 0 6px 15px rgba(169,199,232,.45);
+}
+
+.boton:hover {
+    background: #BFD8F0;
+    transform: translateY(-4px);
+    color: #7A6F60   
+}
+
+.boton::after {
+     content:"☁︎";
+}
+
+.card {
+    background: #F5F2E8;
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #7A6F60;
+}
+
+.card h3 {
+    font-family: "Pacifico", cursive;
+    font-size: 25px;
+}
+
+.card p {
+    font-family: "Quicksand", sans-serif;
+}
+
+.card:hover {
+    transition: 0.3s;
+    transform: translateY(-5px);
+    background-color: #EEF6FD;
+}
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    color: #7A6F60;
+    font-family: 'Quicksand', sans-serif;
+    background: #F7F1E8;
+    text-aling: center; 
+}
+
+.logo {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.02);
+}
+
+.texto {
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    color: #7A6F60;
+}
+
+.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.reciente {
+    cursor: pointer;
+}
+
+.imagen-producto {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.reciente img {
+    width: 220px;
+    border-radius: 20px;
+    display: block;
+}
+
+.proximamente-solo{
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.etiquetas {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+
+    z-index: 10;
+}
+
+.etiqueta {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+}
+
+.nuevo {
+    background-color: #A9C7E8;
+}
+
+.proximamente {
+    background-color: #7A6F60;
+}
+
+.unico {
+    background-color: #A9C7E8;
+}
+
+.vendido {
+    background-color: #7A6F60;
+}
+
+.redes{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:10px;
+}
+
+.redes img{
+    width:35px;
+    transition:.2s;
+}
+
+.redes img:hover{
+    transform:translateY(-2px);
+    color:#A9C7E8;
+}
+
+.redes a{
+    color:#A9C7E8;
+    transition:.25s;
+}
+
+footer{
+    background:#F5F2E8;
+    padding:25px 15px;
+    text-align:center;
+    margin-top:auto;
+    color:#7A6F60;
+}
+
+footer p{
+    margin:8px 0;
+} 
+
+@media (max-width: 600px) {
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .texto {
+        font-size: 28px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .marca {
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        width: 85%;
+    }
+
+    .reciente img {
+        width: 170px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="marca">
+
+    <span class="texto">⊹₊Made</span>
+
+    <img src="Ann.png" class="logo">
+
+    <span class="texto">by Annie ₊⊹</span>
+
+</div>
+
+</header>
+
+<nav>
+
+    <a href="Productos.html">Productos</a>
+</nav>
+
+<main>
+
+
+<div class="card">
+
+    <h3>Bienvenido a Made by Annie</h3>
+<p>
+Cada accesorio que encontrarás aqui está hecho con dedicación y mucho cariño.Explora nuestros diseños o crea uno personalizado para ti.
+</p>
+
+<a href="Perzonaliza.html" class="boton">
+Haz tu pedido
+</a>
+</div>
+
+<div class="card">
+
+    <h3>Cuidados y reparaciones</h3>
+<p>
+Cada pieza está elaborada a mano con mucho cariño <br> y atención a los detalles.
+Si tu accesorio presenta algún inconveniente relacionado con su elaboración durante los primeros 7 dias después de la entrega, contáctame y con gusto revisaré el caso. Pasado ese tiempo,algunas reparaciones podrán realizarse con un pequeño costo, dependiendo del tipo de reparación.
+</p>
+</div>
+
+<div class="card">
+
+    <a href="Info.html"
+       style="text-decoration:none; color:inherit;">
+
+        <h3>¿Cómo comprar?</h3>
+
+        <p>
+       Te explicamos paso a paso como realizar tu pedido,las opciones de pago y el proceso de entrega para que comprar sea fácil y seguro.
+        </p>
+
+    </a>
+</div>
+
+</main>
+
+<footer>
+ <div class="redes">
+
+    <a href="https://instagram.com/madebyannie.art" target="_blank">
+            <img src="Insta.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/593982906711" target="_blank">
+            <img src="Whats.png" alt="WhatsApp">
+        </a>
+    </div>
+    <p>
+        © 2026 Made by Annie
+    </p>
+</footer>
+
+<script>
+
+function verProducto(card) {
+
+    let nombre =
+    card.querySelector(".desc").innerText;
+
+    let desc = "";
+
+    let img1 =
+    card.getAttribute("data-img1");
+
+    let img2 =
+    card.getAttribute("data-img2");
+
+    let unico =
+    card.getAttribute("data-unico");
+
+    let vendido =
+    card.getAttribute("data-vendido");
+
+    let nuevo =
+    card.getAttribute("data-nuevo");
+
+    let proximamente =
+    card.getAttribute("data-proximamente");
+
+    let precio =
+    card.getAttribute("data-precio");
+
+    let url =
+    "Detalle.html?nombre=" + encodeURIComponent(nombre)
+
+    + "&desc=" + encodeURIComponent(desc)
+
+    + "&img1=" + encodeURIComponent(img1)
+
+    + "&img2=" + encodeURIComponent(img2)
+
+    + "&unico=" + encodeURIComponent(unico)
+
+    + "&vendido=" + encodeURIComponent(vendido)
+
+    + "&nuevo=" + encodeURIComponent(nuevo)
+
+    + "&proximamente=" + encodeURIComponent(proximamente)
+
+    + "&precio=" + encodeURIComponent(precio);
+
+    window.location.href = url;
+}
+
+</script>
+
+</body>
+</html>
