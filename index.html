@@ -65,6 +65,32 @@ main {
     margin: auto;
 }
 
+.boton {
+   display: inline-block;
+   margin-top: 20px;
+   font-size: 15px;
+   padding: 14px 30px;
+   background: #A9C7E8;
+   color: white;
+   text-decoration: none;
+   border-radius: 999px;
+   font-family:"Quicksand", sans-serif;
+   font-weigth: bold;
+   letter-spacing:.5px;
+   transition: 3s;
+   box-shadow: 0 6px 15px rgba(169,199,232,.45);
+}
+
+.boton:hover {
+    background: #BFD8F0;
+    transform: translateY(-4px);
+    color: #7A6F60   
+}
+
+.boton::after {
+     content:"☁︎";
+}
+
 .card {
     background: #F5F2E8;
     padding: 15px;
@@ -93,9 +119,11 @@ main {
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 45px 20px;
     color: #7A6F60;
     font-family: 'Quicksand', sans-serif;
+    background: #F7F1E8;
+    text-aling: center; 
 }
 
 .logo {
@@ -190,6 +218,40 @@ footer {
     background-color: #7A6F60;
 }
 
+.redes{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:10px;
+}
+
+.redes img{
+    width:35px;
+    transition:.2s;
+}
+
+.redes img:hover{
+    transform:translateY(-2px);
+    color:#A9C7E8;
+}
+
+.redes a{
+    color:#A9C7E8;
+    transition:.25s;
+}
+
+footer{
+    background:#F5F2E8;
+    padding:25px 15px;
+    text-align:center;
+    margin-top:auto;
+    color:#7A6F60;
+}
+
+footer p{
+    margin:8px 0;
+} 
+
 @media (max-width: 600px) {
 
     nav {
@@ -251,11 +313,6 @@ footer {
 <nav>
 
     <a href="Productos.html">Productos</a>
-
-    <a href="Perzonaliza.html">Personalizar producto</a>
-
-    <a href="Contactos.html">Contacto</a>
-
 </nav>
 
 <main>
@@ -263,55 +320,24 @@ footer {
 
 <div class="card">
 
-    <h3>Bienvenidos</h3>
+    <h3>Bienvenido a Made by Annie</h3>
+<p>
+Cada accesorio que encontrarás aqui está hecho con dedicación y mucho cariño.Explora nuestros diseños o crea uno personalizado para ti.
+</p>
 
-    <p>
-    Productos hechos a mano con mucho amor &lt;3
-    </p>
-
-    <p>
-    Llaveros y accesorios personalizados hechos bajo pedido ₊⊹
-    </p>
-
+<a href="Perzonaliza.html" class="boton">
+Haz tu pedido
+</a>
 </div>
 
-<div class="card reciente producto"
+<div class="card">
 
-     onclick="verProducto(this)"
-
-     data-img1="cinna1.jpg"
-     data-img2="cinna2.jpg"
-
-     data-unico="no"
-     data-vendido="no"
-     data-nuevo="no"
-     data-proximamente="si"
-
-     data-precio="Individual • $3.50 | Pareja • $6.50">
-
-    <h3 class="nombre">
-        Productos Recientes
-    </h3>
-
-    <p class="desc">
-        Llavero Duo SweetRolls
-    </p>
-
-    <div class="imagen-producto">
-
-        <div class="etiquetas">
-
-            <span class="etiqueta proximamente">
-            </span>
-
-        </div>
-<div class="producto proximamente-solo">
-
-    <img src="Proximamente.png" class="proximamente-img">
-
-    </div>
-   </div>
- </div>
+    <h3>Cuidados y reparaciones</h3>
+<p>
+Cada pieza está elaborada a mano con mucho cariño <br> y atención a los detalles.
+Si tu accesorio presenta algún inconveniente relacionado con su elaboración durante los primeros 7 dias después de la entrega, contáctame y con gusto revisaré el caso. Pasado ese tiempo,algunas reparaciones podrán realizarse con un pequeño costo, dependiendo del tipo de reparación.
+</p>
+</div>
 
 <div class="card">
 
@@ -321,7 +347,7 @@ footer {
         <h3>¿Cómo comprar?</h3>
 
         <p>
-        Conoce cómo hacer tu pedido, pagos y entregas
+       Te explicamos paso a paso como realizar tu pedido,las opciones de pago y el proceso de entrega para que comprar sea fácil y seguro.
         </p>
 
     </a>
@@ -330,7 +356,19 @@ footer {
 </main>
 
 <footer>
-    © 2026 Made by Annie
+ <div class="redes">
+
+    <a href="https://instagram.com/madebyannie.art" target="_blank">
+            <img src="Insta.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/593982906711" target="_blank">
+            <img src="Whats.png" alt="WhatsApp">
+        </a>
+    </div>
+    <p>
+        © 2026 Made by Annie
+    </p>
 </footer>
 
 <script>

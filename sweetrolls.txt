@@ -1,0 +1,9 @@
+ <div class="precio">
+    1 llavero • $3.50 <br>
+    Duo • $6.50
+</div>
+<p class="desc">
+        Hechos a mano para personas inseparables.<br>
+        Viene en pareja para que puedas compartirlo con quien más quieras.
+        Sus colores crema y celeste pastel están pensados para encajar el uno con el otro.
+    </p>

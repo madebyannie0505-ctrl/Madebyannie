@@ -42,7 +42,10 @@ body {
 }
 
 header {
-    padding: 20px;
+    background-color: #F5F2E8;
+    padding: 50px;
+    text-align: center;
+    pading:20;
 }
 
 .logo {
@@ -91,10 +94,32 @@ p {
     color: #7A6F60;
 }
 
-footer {
-    margin-top: 30px;
-    padding: 15px;
-    color: #7A6F60;
+footer{
+    background:#F5F2E8;
+    padding:25px 15px;
+    text-align:center;
+    margin-top:auto;
+    color:#7A6F60;
+}
+
+footer p{
+    margin:8px 0;
+} 
+
+.redes{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:15px;
+}
+
+.redes img{
+    width:28px;
+    transition:.2s;
+}
+
+.redes img:hover{
+    transform:scale(1.15);
 }
 
 .botones {
@@ -160,9 +185,9 @@ footer {
 
 <br>
     <nav>
+    <a href="Index.html" class="boton">Inicio</a>
     <a href="Productos.html" class="boton">Productos</a>
     <a href="Perzonaliza.html" class="boton">Perzonalizar productos</a>
-    <a href="Contactos.html" class="boton">Contacto</a>
     </nav>
 <br>
 
@@ -189,7 +214,7 @@ footer {
 - Efectivo<br>
 - Transferencia<br>
 <br>
--Cada llavero se realiza bajo pedido y con cariño,<br>
+-Cada accesorio se realiza bajo pedido y con cariño,<br>
 por lo que se solicita un adelanto del 50% para iniciar tu pedido.<br>
 El 50% restante se paga al momento de la entrega.
 </p>
@@ -207,6 +232,17 @@ Envíame tu idea o imagen por WhatsApp o Instagram <3.
 </div>
 
 <footer>
+<div class="redes">
+
+        <a href="https://instagram.com/madebyannie.art" target="_blank">
+            <img src="Insta.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/593982906711" target="_blank">
+            <img src="Whats.png" alt="WhatsApp">
+        </a>
+    </div>
+
     © 2026 Made by Annie 
 </footer>
 
